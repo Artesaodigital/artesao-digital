@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Quanto Vale o Seu Artesanato? — Artesão Digital</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --marrom:#8B5E3C;
+  --marrom-esc:#6B4326;
+  --verde:#6B8F71;
+  --verde-esc:#4d6b52;
+  --dourado:#B8860B;
+  --dourado-cl:#F0C060;
+  --bege:#F5F1EA;
+  --bege-md:#EDE6DA;
+  --bege-esc:#DDD3C2;
+  --texto:#2C1F14;
+  --texto-cl:#5A4030;
+}
+html{scroll-behavior:smooth;}
+body{
+  font-family:'Lato',sans-serif;
+  background:var(--bege);
+  color:var(--texto);
+  overflow-x:hidden;
+}
+
+/* ── TOPBAR ── */
+.topbar{
+  background:var(--marrom-esc);
+  color:#F5F1EA;
+  text-align:center;
+  padding:10px 20px;
+  font-size:13px;
+  letter-spacing:1.5px;
+  font-weight:700;
+}
+.topbar span{color:var(--dourado-cl);}
+
+/* ── NAV ── */
+nav{
+  background:var(--bege);
+  border-bottom:1px solid var(--bege-esc);
+  padding:16px 40px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  position:sticky;top:0;z-index:100;
+}
+.nav-brand{
+  font-family:'Playfair Display',serif;
+  font-size:18px;
+  color:var(--marrom);
+  letter-spacing:1px;
+}
+.nav-brand span{color:var(--verde);font-style:italic;}
+.nav-cta{
+  background:var(--verde);
+  color:#fff;
+  padding:10px 24px;
+  border-radius:4px;
+  text-decoration:none;
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:1px;
+  transition:background .2s;
+}
+.nav-cta:hover{background:var(--verde-esc);}
+
+/* ── HERO ── */
+.hero{
+  background:var(--marrom);
+  color:#F5F1EA;
+  padding:80px 40px 90px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  top:-120px;left:50%;
+  transform:translateX(-50%);
+  width:700px;height:700px;
+  border-radius:50%;
+  background:var(--marrom-esc);
+  opacity:.5;
+  pointer-events:none;
+}
+.hero-eyebrow{
+  display:inline-block;
+  background:rgba(255,255,255,.12);
+  border:1px solid rgba(255,255,255,.25);
+  color:var(--dourado-cl);
+  font-size:11px;
+  letter-spacing:3px;
+  font-weight:700;
+  padding:6px 18px;
+  border-radius:2px;
+  margin-bottom:28px;
+  position:relative;
+}
+.hero h1{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(36px,6vw,68px);
+  font-weight:700;
+  line-height:1.1;
+  margin-bottom:12px;
+  position:relative;
+}
+.hero h1 em{
+  color:var(--dourado-cl);
+  font-style:italic;
+}
+.hero-sub{
+  font-size:18px;
+  font-weight:300;
+  opacity:.85;
+  max-width:560px;
+  margin:0 auto 36px;
+  line-height:1.6;
+  position:relative;
+}
+.hero-pills{
+  display:flex;
+  gap:12px;
+  justify-content:center;
+  flex-wrap:wrap;
+  margin-bottom:44px;
+  position:relative;
+}
+.hero-pills span{
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.2);
+  padding:6px 16px;
+  border-radius:20px;
+  font-size:12px;
+  letter-spacing:.5px;
+}
+.btn-hero{
+  display:inline-block;
+  background:var(--verde);
+  color:#fff;
+  padding:18px 52px;
+  border-radius:4px;
+  font-size:16px;
+  font-weight:700;
+  text-decoration:none;
+  letter-spacing:1px;
+  position:relative;
+  transition:all .2s;
+  box-shadow:0 4px 24px rgba(0,0,0,.25);
+}
+.btn-hero:hover{background:var(--verde-esc);transform:translateY(-2px);}
+.btn-hero-sub{
+  display:block;
+  margin-top:12px;
+  font-size:12px;
+  opacity:.65;
+  letter-spacing:.5px;
+  position:relative;
+}
+.hero-wave{
+  position:absolute;
+  bottom:-1px;left:0;right:0;
+  height:60px;
+}
+
+/* ── DOR ── */
+.dor{
+  background:var(--bege-md);
+  padding:80px 40px;
+  text-align:center;
+}
+.dor-intro{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(22px,4vw,38px);
+  color:var(--marrom);
+  max-width:700px;
+  margin:0 auto 20px;
+  line-height:1.35;
+}
+.dor-intro em{color:var(--dourado);font-style:italic;}
+.dor-desc{
+  color:var(--texto-cl);
+  font-size:16px;
+  max-width:560px;
+  margin:0 auto 52px;
+  line-height:1.7;
+}
+.cenarios{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:20px;
+  max-width:960px;
+  margin:0 auto;
+}
+.cenario{
+  background:#fff;
+  border:1px solid var(--bege-esc);
+  border-top:3px solid var(--marrom);
+  border-radius:4px;
+  padding:28px 24px;
+  text-align:left;
+}
+.cenario-nome{
+  font-weight:700;
+  font-size:13px;
+  color:var(--marrom);
+  letter-spacing:.5px;
+  margin-bottom:10px;
+}
+.cenario p{
+  font-size:14px;
+  color:var(--texto-cl);
+  line-height:1.6;
+  margin-bottom:10px;
+}
+.cenario-resultado{
+  font-size:13px;
+  font-weight:700;
+  color:#c0392b;
+  background:#fff0ef;
+  padding:8px 12px;
+  border-radius:3px;
+  border-left:3px solid #c0392b;
+}
+
+/* ── SOLUÇÃO ── */
+.solucao{
+  background:var(--bege);
+  padding:90px 40px;
+  text-align:center;
+}
+.section-label{
+  font-size:11px;
+  letter-spacing:3px;
+  font-weight:700;
+  color:var(--verde);
+  text-transform:uppercase;
+  margin-bottom:16px;
+}
+.section-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(26px,4vw,44px);
+  color:var(--marrom);
+  max-width:680px;
+  margin:0 auto 16px;
+  line-height:1.25;
+}
+.section-desc{
+  font-size:16px;
+  color:var(--texto-cl);
+  max-width:560px;
+  margin:0 auto 56px;
+  line-height:1.7;
+}
+.capitulos{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:24px;
+  max-width:980px;
+  margin:0 auto;
+}
+.cap{
+  background:#fff;
+  border:1px solid var(--bege-esc);
+  border-radius:6px;
+  padding:28px 24px;
+  text-align:left;
+  transition:box-shadow .2s;
+}
+.cap:hover{box-shadow:0 4px 20px rgba(139,94,60,.1);}
+.cap-num{
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  color:var(--bege-esc);
+  font-weight:700;
+  line-height:1;
+  margin-bottom:12px;
+}
+.cap h3{
+  font-family:'Playfair Display',serif;
+  font-size:17px;
+  color:var(--marrom);
+  margin-bottom:8px;
+  line-height:1.3;
+}
+.cap p{
+  font-size:14px;
+  color:var(--texto-cl);
+  line-height:1.65;
+}
+
+/* ── FORMULA ── */
+.formula-section{
+  background:var(--marrom);
+  color:#F5F1EA;
+  padding:80px 40px;
+  text-align:center;
+}
+.formula-section .section-label{color:var(--dourado-cl);}
+.formula-section .section-title{color:#F5F1EA;}
+.formula-box{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:8px;
+  padding:36px 48px;
+  max-width:640px;
+  margin:0 auto 40px;
+  font-family:'Playfair Display',serif;
+}
+.formula-box .formula-text{
+  font-size:clamp(16px,3vw,24px);
+  color:var(--dourado-cl);
+  line-height:1.6;
+  font-style:italic;
+}
+.formula-box .formula-note{
+  font-size:13px;
+  opacity:.6;
+  margin-top:14px;
+  font-family:'Lato',sans-serif;
+  font-style:normal;
+}
+.exemplos-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+  gap:16px;
+  max-width:860px;
+  margin:0 auto;
+}
+.exemplo{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:6px;
+  padding:20px 16px;
+  text-align:left;
+}
+.exemplo-icone{font-size:22px;margin-bottom:10px;}
+.exemplo h4{font-size:14px;font-weight:700;margin-bottom:6px;color:var(--dourado-cl);}
+.exemplo p{font-size:13px;opacity:.75;line-height:1.5;}
+
+/* ── ERROS ── */
+.erros{
+  background:var(--bege-md);
+  padding:80px 40px;
+  text-align:center;
+}
+.erros-lista{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:20px;
+  max-width:900px;
+  margin:0 auto;
+  text-align:left;
+}
+.erro{
+  background:#fff;
+  border-radius:6px;
+  padding:24px 22px;
+  border-left:4px solid var(--marrom);
+}
+.erro-num{
+  font-family:'Playfair Display',serif;
+  font-size:28px;
+  color:var(--bege-esc);
+  font-weight:700;
+  line-height:1;
+}
+.erro h4{
+  font-size:14px;
+  font-weight:700;
+  color:var(--marrom);
+  margin:6px 0 8px;
+}
+.erro p{font-size:13px;color:var(--texto-cl);line-height:1.55;}
+.erro-solucao{
+  font-size:12px;
+  color:var(--verde-esc);
+  font-weight:700;
+  margin-top:10px;
+}
+
+/* ── PARA QUEM ── */
+.para-quem{
+  background:var(--bege);
+  padding:80px 40px;
+  text-align:center;
+}
+.para-quem-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:16px;
+  max-width:860px;
+  margin:0 auto;
+}
+.para-quem-item{
+  background:var(--bege-md);
+  border-radius:6px;
+  padding:22px 20px;
+  text-align:left;
+  display:flex;
+  gap:14px;
+  align-items:flex-start;
+}
+.check{
+  width:22px;height:22px;
+  background:var(--verde);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-size:12px;font-weight:700;
+  flex-shrink:0;margin-top:2px;
+}
+.para-quem-item p{font-size:14px;color:var(--texto-cl);line-height:1.55;}
+
+/* ── BONUS APP ── */
+.bonus{
+  background:var(--verde);
+  color:#fff;
+  padding:60px 40px;
+  text-align:center;
+}
+.bonus h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(22px,4vw,36px);
+  margin-bottom:16px;
+  line-height:1.25;
+}
+.bonus p{
+  font-size:16px;
+  opacity:.9;
+  max-width:580px;
+  margin:0 auto;
+  line-height:1.65;
+}
+
+/* ── GARANTIA ── */
+.garantia{
+  background:var(--bege-md);
+  padding:70px 40px;
+  text-align:center;
+}
+.garantia-box{
+  background:#fff;
+  border:2px solid var(--verde);
+  border-radius:8px;
+  padding:40px 48px;
+  max-width:580px;
+  margin:0 auto;
+}
+.garantia-box .g-icon{font-size:44px;margin-bottom:16px;}
+.garantia-box h3{
+  font-family:'Playfair Display',serif;
+  font-size:24px;
+  color:var(--marrom);
+  margin-bottom:14px;
+}
+.garantia-box p{
+  font-size:15px;
+  color:var(--texto-cl);
+  line-height:1.7;
+}
+
+/* ── CTA FINAL ── */
+.cta-final{
+  background:var(--marrom);
+  color:#F5F1EA;
+  padding:90px 40px;
+  text-align:center;
+}
+.cta-final h2{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(28px,5vw,52px);
+  margin-bottom:12px;
+  line-height:1.15;
+}
+.cta-final h2 em{color:var(--dourado-cl);font-style:italic;}
+.cta-final p{
+  font-size:17px;
+  opacity:.8;
+  max-width:520px;
+  margin:0 auto 36px;
+  line-height:1.65;
+}
+.preco-box{
+  margin-bottom:32px;
+}
+.preco-de{
+  font-size:14px;
+  opacity:.55;
+  letter-spacing:.5px;
+  margin-bottom:4px;
+}
+.preco-de s{opacity:.8;}
+.preco-por{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(44px,7vw,72px);
+  color:var(--dourado-cl);
+  font-weight:700;
+  line-height:1;
+}
+.preco-por small{font-size:28px;vertical-align:super;}
+.preco-pix{
+  font-size:13px;
+  opacity:.6;
+  margin-top:6px;
+  letter-spacing:.5px;
+}
+.btn-cta{
+  display:inline-block;
+  background:var(--verde);
+  color:#fff;
+  padding:20px 60px;
+  border-radius:4px;
+  font-size:17px;
+  font-weight:700;
+  text-decoration:none;
+  letter-spacing:1px;
+  transition:all .2s;
+  box-shadow:0 6px 28px rgba(0,0,0,.3);
+}
+.btn-cta:hover{background:var(--verde-esc);transform:translateY(-2px);}
+.cta-seguro{
+  margin-top:16px;
+  font-size:12px;
+  opacity:.5;
+  letter-spacing:.5px;
+}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--marrom-esc);
+  color:#F5F1EA;
+  text-align:center;
+  padding:32px 40px;
+  font-size:13px;
+  opacity:.9;
+  line-height:1.8;
+}
+footer a{color:var(--dourado-cl);text-decoration:none;}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(24px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.hero>*{animation:fadeUp .7s ease both;}
+.hero .hero-eyebrow{animation-delay:.1s;}
+.hero h1{animation-delay:.2s;}
+.hero .hero-sub{animation-delay:.3s;}
+.hero .hero-pills{animation-delay:.4s;}
+.hero .btn-hero{animation-delay:.5s;}
+.hero .btn-hero-sub{animation-delay:.5s;}
+
+@media(max-width:640px){
+  nav{padding:14px 20px;}
+  .hero{padding:60px 20px 80px;}
+  .dor,.solucao,.formula-section,.erros,.para-quem,.garantia,.cta-final{padding:60px 20px;}
+  .formula-box{padding:28px 24px;}
+  .garantia-box{padding:32px 24px;}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">🔒 Acesso imediato após a compra &nbsp;•&nbsp; <span>Garantia de 7 dias</span> &nbsp;•&nbsp; PDF no celular, tablet ou computador</div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-brand">Artesão <span>Digital</span></div>
+  <a href="#comprar" class="nav-cta">Quero o Guia →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-eyebrow">NOVO GUIA COMPLETO</div>
+  <h1>Quanto Vale o Seu<br/><em>Artesanato?</em></h1>
+  <p class="hero-sub">O guia que ensina artesãos brasileiros a calcular o preço justo de qualquer peça — com fórmula completa, exemplos reais e os 7 erros fatais que fazem você trabalhar no prejuízo sem saber.</p>
+  <div class="hero-pills">
+    <span>🧮 4 Pilares do Preço Justo</span>
+    <span>📐 Fórmula Completa</span>
+    <span>✅ 4 Exemplos Reais</span>
+    <span>⚠️ 7 Erros Fatais</span>
+  </div>
+  <a href="#comprar" class="btn-hero">QUERO PRECIFICAR COM JUSTIÇA</a>
+  <span class="btn-hero-sub">Download imediato em PDF • R$ 37,00</span>
+  <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z" fill="#EDE6DA"/></svg>
+</section>
+
+<!-- DOR -->
+<section class="dor">
+  <p class="dor-intro">Você trabalha horas numa peça e na hora de cobrar bate aquela insegurança:<br/><em>"Será que está caro demais?"</em></p>
+  <p class="dor-desc">Se você se identificou, saiba: não é culpa sua. Ninguém nos ensina a precificar. O resultado? Artesãos incríveis trabalhando muito — e ganhando menos do que o salário mínimo por hora.</p>
+  <div class="cenarios">
+    <div class="cenario">
+      <div class="cenario-nome">📍 Cenário 1 — A Artesã que Não Cobra a Hora</div>
+      <p>Maria faz bolsas de crochê e cobra R$ 89. "Sobram R$ 51, não é ruim!" — ela pensa. Mas cada bolsa leva 4 horas.</p>
+      <div class="cenario-resultado">→ Lucro real: R$ 12,75/h — menos que o salário mínimo</div>
+    </div>
+    <div class="cenario">
+      <div class="cenario-nome">📍 Cenário 2 — O Artesão que Ignora os Custos Fixos</div>
+      <p>João calculou materiais e hora, achou que tinha R$ 4,75 de lucro por sabonete. Esqueceu energia, gás e internet.</p>
+      <div class="cenario-resultado">→ Lucro real: apenas R$ 1,55 — margem de 8,6%</div>
+    </div>
+    <div class="cenario">
+      <div class="cenario-nome">📍 Cenário 3 — A Artesã do Marketplace</div>
+      <p>Ana calculou R$ 17 de lucro por pulseira no Elo7. Não considerou a taxa de 16% da plataforma mais 3% do cartão.</p>
+      <div class="cenario-resultado">→ Lucro real: R$ 8,45 — 50% menor do que ela imaginou</div>
+    </div>
+    <div class="cenario">
+      <div class="cenario-nome">📍 Cenário 4 — O Artesão do "Feeling"</div>
+      <p>Carlos olhou o concorrente cobrando R$ 65 e cobrou R$ 60 "pra ficar mais barato" — sem calcular se cobre seus custos.</p>
+      <div class="cenario-resultado">→ Risco real: pode não cobrir nem seus próprios gastos</div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUÇÃO -->
+<section class="solucao">
+  <p class="section-label">O QUE VOCÊ VAI APRENDER</p>
+  <h2 class="section-title">7 capítulos para você sair do prejuízo e precificar com confiança</h2>
+  <p class="section-desc">Do diagnóstico honesto até a transição de preços sem perder clientes — tudo que você precisa saber, em ordem, com exemplos práticos.</p>
+  <div class="capitulos">
+    <div class="cap">
+      <div class="cap-num">01</div>
+      <h3>Por que artesãos trabalham no prejuízo sem saber?</h3>
+      <p>O diagnóstico honesto com 4 cenários reais que a maioria vive — e não percebe.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-num">02</div>
+      <h3>Os 4 Pilares do Preço Justo</h3>
+      <p>Materiais, mão de obra, custos fixos e margem — em profundidade, com tabelas e exemplos.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-num">03</div>
+      <h3>Quanto Vale a Sua Hora?</h3>
+      <p>A mentalidade e o cálculo que mudam tudo — e como superar o bloqueio de se valorizar.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-num">04</div>
+      <h3>Exemplos Reais de Precificação</h3>
+      <p>Sabonete, pulseira, bolsa de crochê e camiseta customizada — calculados do zero.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-num">05</div>
+      <h3>Os 7 Erros Fatais</h3>
+      <p>Os erros mais comuns na precificação e a solução prática para cada um deles.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-num">06</div>
+      <h3>A Transição para o Preço Justo</h3>
+      <p>Como subir o preço com segurança, sem perder o sono — nem os melhores clientes.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-num">07</div>
+      <h3>Seus Próximos Passos</h3>
+      <p>Como automatizar sua precificação e crescer com sustentabilidade de verdade.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FÓRMULA -->
+<section class="formula-section">
+  <p class="section-label">A FÓRMULA COMPLETA</p>
+  <h2 class="section-title" style="color:#F5F1EA;">Calcule o preço de qualquer peça em minutos</h2>
+  <div class="formula-box">
+    <div class="formula-text">Preço Final = (Materiais + Mão de Obra + Custos Fixos) × (1 + Margem ÷ 100)</div>
+    <div class="formula-note">Simples assim. E você vai saber aplicar em qualquer produto — com números reais, do seu ateliê.</div>
+  </div>
+  <div class="exemplos-grid">
+    <div class="exemplo">
+      <div class="exemplo-icone">🧼</div>
+      <h4>Sabonete Artesanal</h4>
+      <p>Custo real: R$ 13,85<br/>Com 70% de margem → <strong style="color:var(--dourado-cl)">R$ 24,00</strong></p>
+    </div>
+    <div class="exemplo">
+      <div class="exemplo-icone">📿</div>
+      <h4>Pulseira de Macramê</h4>
+      <p>Custo real: R$ 27,20<br/>Com 60% de margem → <strong style="color:var(--dourado-cl)">R$ 44,90</strong></p>
+    </div>
+    <div class="exemplo">
+      <div class="exemplo-icone">👜</div>
+      <h4>Bolsa de Crochê</h4>
+      <p>Custo real: R$ 178,98<br/>Com 70% de margem → <strong style="color:var(--dourado-cl)">R$ 299,00</strong></p>
+    </div>
+    <div class="exemplo">
+      <div class="exemplo-icone">👕</div>
+      <h4>Camiseta Customizada</h4>
+      <p>Custo real: R$ 41,50<br/>Com 65% de margem → <strong style="color:var(--dourado-cl)">R$ 69,90</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- ERROS -->
+<section class="erros">
+  <p class="section-label">OS 7 ERROS FATAIS</p>
+  <h2 class="section-title">Você comete algum desses erros agora?</h2>
+  <p class="section-desc">Conhecer os erros mais comuns é tão importante quanto saber a fórmula certa.</p>
+  <div class="erros-lista">
+    <div class="erro">
+      <div class="erro-num">01</div>
+      <h4>Não incluir o próprio trabalho no preço</h4>
+      <p>Seu tempo é o insumo mais valioso. Se você trabalhou, precisa ser remunerada — sempre.</p>
+      <div class="erro-solucao">✓ Solução: calcule o valor da sua hora e inclua em todos os produtos</div>
+    </div>
+    <div class="erro">
+      <div class="erro-num">02</div>
+      <h4>Não anotar os custos no momento da compra</h4>
+      <p>Se você não sabe quanto gastou em cada material, não tem como calcular o preço certo.</p>
+      <div class="erro-solucao">✓ Solução: anote produto, quantidade e preço em toda compra</div>
+    </div>
+    <div class="erro">
+      <div class="erro-num">03</div>
+      <h4>Copiar o preço da concorrência</h4>
+      <p>A sua estrutura de custos é única. A concorrente pode ter fornecedor mais barato — ou estar no prejuízo também.</p>
+      <div class="erro-solucao">✓ Solução: calcule SEU custo primeiro, use o mercado só como referência</div>
+    </div>
+    <div class="erro">
+      <div class="erro-num">04</div>
+      <h4>Dar desconto sem saber o impacto</h4>
+      <p>Um desconto de 20% em produto com margem de 30% zera o lucro completamente.</p>
+      <div class="erro-solucao">✓ Solução: defina um preço mínimo e nunca venda abaixo dele</div>
+    </div>
+    <div class="erro">
+      <div class="erro-num">05</div>
+      <h4>Ignorar as taxas de cartão e marketplace</h4>
+      <p>Uma taxa de 16% muda completamente o lucro real. Muitos só percebem no fechamento do mês.</p>
+      <div class="erro-solucao">✓ Solução: calcule o preço para cada canal separadamente</div>
+    </div>
+    <div class="erro">
+      <div class="erro-num">06</div>
+      <h4>Esquecer embalagem, frete e perdas</h4>
+      <p>Caixa, fita, papel de seda, etiquetas dos Correios, materiais estragados — tudo tem custo.</p>
+      <div class="erro-solucao">✓ Solução: adicione uma reserva de 5% no custo de materiais</div>
+    </div>
+    <div class="erro">
+      <div class="erro-num">07</div>
+      <h4>Ter medo de cobrar o preço justo</h4>
+      <p>Preço baixo demais afasta os melhores clientes e atrai apenas os que querem barganha.</p>
+      <div class="erro-solucao">✓ Solução: confie no seu trabalho. O preço certo atrai os clientes certos</div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="para-quem">
+  <p class="section-label">PARA QUEM É ESSE GUIA</p>
+  <h2 class="section-title">Este guia foi feito para você se...</h2>
+  <div class="para-quem-grid">
+    <div class="para-quem-item"><div class="check">✓</div><p>Você vende artesanato — sabonetes, crochê, bijuterias, velas, costura, biscuit, macramê e mais</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você está começando e quer já começar cobrando o preço certo desde o primeiro produto</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você vende há anos mas nunca calculou o preço com método — só no feeling ou copiando a concorrência</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você sente que trabalha muito mas o dinheiro nunca fecha como deveria no final do mês</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você tem medo de subir o preço e perder clientes — e quer aprender a fazer isso com segurança</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você quer tratar seu artesanato como um negócio de verdade, sustentável e lucrativo</p></div>
+  </div>
+</section>
+
+<!-- BÔNUS APP -->
+<section class="bonus">
+  <h2>⚡ Bônus: a lógica do app Artesão Certo</h2>
+  <p>As faixas de margem e a fórmula ensinadas neste guia são as mesmas usadas no app Artesão Certo — quando você estiver pronto para automatizar tudo, calcular no celular em segundos, a lógica já vai estar na sua cabeça. A transição vai ser natural.</p>
+</section>
+
+<!-- GARANTIA -->
+<section class="garantia">
+  <p class="section-label">RISCO ZERO</p>
+  <div class="garantia-box">
+    <div class="g-icon">🔒</div>
+    <h3>Garantia incondicional de 7 dias</h3>
+    <p>Se você não ficar 100% satisfeita com o conteúdo, basta entrar em contato dentro de 7 dias após a compra e devolvemos todo o seu dinheiro. Sem perguntas. Sem burocracia. Sem formulário complicado.</p>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-final" id="comprar">
+  <h2>Chega de cobrar no feeling.<br/>Comece a lucrar de <em>verdade.</em></h2>
+  <p>Invista no conhecimento que vai mudar como você precifica — para sempre.</p>
+  <div class="preco-box">
+    <div class="preco-de">De <s>R$ 57,00</s></div>
+    <div class="preco-por"><small>R$</small> 37<small>,00</small></div>
+    <div class="preco-pix">ou R$ 35,15 no Pix</div>
+  </div>
+  <a href="https://pay.kiwify.com.br/FR29HdT" class="btn-cta">QUERO PRECIFICAR COM JUSTIÇA →</a>
+  <div class="cta-seguro">🔒 Compra segura • Download imediato • Garantia de 7 dias</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <strong>Artesão Digital</strong><br/>
+  <a href="mailto:contato@artesaodigital.com">contato@artesaodigital.com</a> &nbsp;•&nbsp; <a href="https://artesaodigital.com">artesaodigital.com</a><br/>
+  © 2025 Artesão Digital. Todos os direitos reservados.
+</footer>
+
+</body>
+</html>
