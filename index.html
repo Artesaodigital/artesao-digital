@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Artesão Digital — Tecnologia e conhecimento para artesãos brasileiros</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--marrom:#8B5E3C;--marrom-esc:#6B4326;--verde:#6B8F71;--verde-esc:#4d6b52;--dourado:#B8860B;--dourado-cl:#F0C060;--bege:#F5F1EA;--bege-md:#EDE6DA;--bege-esc:#DDD3C2;--texto:#2C1F14;--texto-cl:#5A4030;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;background:var(--bege);color:var(--texto);overflow-x:hidden;}
+nav{background:var(--bege);border-bottom:1px solid var(--bege-esc);padding:18px 40px;display:flex;align-items:center;justify-content:space-between;}
+.nav-brand{font-family:'Playfair Display',serif;font-size:22px;color:var(--marrom);letter-spacing:1px;}
+.nav-brand span{color:var(--verde);font-style:italic;}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{color:var(--texto-cl);text-decoration:none;font-size:14px;letter-spacing:.5px;transition:color .2s;}
+.nav-links a:hover{color:var(--marrom);}
+.hero{background:var(--marrom);color:#F5F1EA;padding:100px 40px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-140px;left:50%;transform:translateX(-50%);width:800px;height:800px;border-radius:50%;background:var(--marrom-esc);opacity:.4;pointer-events:none;}
+.hero-eyebrow{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:var(--dourado-cl);font-size:11px;letter-spacing:4px;font-weight:700;padding:8px 20px;border-radius:2px;margin-bottom:32px;position:relative;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,72px);font-weight:700;line-height:1.1;margin-bottom:20px;position:relative;}
+.hero h1 em{color:var(--dourado-cl);font-style:italic;}
+.hero p{font-size:19px;opacity:.8;max-width:580px;margin:0 auto 52px;line-height:1.65;position:relative;}
+.hero-wave{position:absolute;bottom:-1px;left:0;right:0;height:70px;}
+.produtos{background:var(--bege-md);padding:90px 40px;text-align:center;}
+.section-label{font-size:11px;letter-spacing:3px;font-weight:700;color:var(--verde);text-transform:uppercase;margin-bottom:16px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,44px);color:var(--marrom);max-width:680px;margin:0 auto 16px;line-height:1.25;}
+.section-desc{font-size:16px;color:var(--texto-cl);max-width:540px;margin:0 auto 60px;line-height:1.7;}
+.produtos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:1020px;margin:0 auto;}
+.produto-card{background:#fff;border:1px solid var(--bege-esc);border-radius:8px;overflow:hidden;transition:box-shadow .25s,transform .25s;}
+.produto-card:hover{box-shadow:0 8px 32px rgba(139,94,60,.15);transform:translateY(-3px);}
+.card-top{padding:36px 28px 24px;border-bottom:1px solid var(--bege-esc);}
+.card-tag{display:inline-block;font-size:10px;letter-spacing:2px;font-weight:700;padding:4px 12px;border-radius:2px;margin-bottom:16px;}
+.tag-ebook{background:rgba(139,94,60,.1);color:var(--marrom);}
+.tag-pack{background:rgba(107,143,113,.1);color:var(--verde-esc);}
+.tag-breve{background:rgba(184,134,11,.1);color:var(--dourado);}
+.card-icone{font-size:36px;margin-bottom:14px;}
+.card-top h3{font-family:'Playfair Display',serif;font-size:22px;color:var(--marrom);margin-bottom:10px;line-height:1.25;}
+.card-top p{font-size:14px;color:var(--texto-cl);line-height:1.6;}
+.card-bottom{padding:20px 28px;display:flex;align-items:center;justify-content:space-between;}
+.card-preco{font-family:'Playfair Display',serif;font-size:24px;color:var(--marrom);font-weight:700;}
+.card-preco small{font-size:14px;vertical-align:super;}
+.card-btn{background:var(--verde);color:#fff;padding:10px 22px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.5px;transition:background .2s;}
+.card-btn:hover{background:var(--verde-esc);}
+.card-btn.breve{background:var(--bege-esc);color:var(--texto-cl);cursor:default;}
+.missao{background:var(--bege);padding:90px 40px;text-align:center;}
+.missao-box{max-width:680px;margin:0 auto;}
+.missao-box blockquote{font-family:'Playfair Display',serif;font-size:clamp(20px,3vw,28px);color:var(--marrom);font-style:italic;line-height:1.45;margin-bottom:20px;}
+.missao-box p{font-size:16px;color:var(--texto-cl);line-height:1.7;}
+.numeros{background:var(--verde);color:#fff;padding:70px 40px;text-align:center;}
+.numeros-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:20px;max-width:760px;margin:0 auto;}
+.numero-item .num{font-family:'Playfair Display',serif;font-size:52px;font-weight:700;color:var(--dourado-cl);line-height:1;}
+.numero-item .label{font-size:13px;opacity:.8;margin-top:6px;letter-spacing:.5px;}
+footer{background:var(--marrom-esc);color:#F5F1EA;text-align:center;padding:40px;font-size:13px;line-height:2;}
+footer a{color:var(--dourado-cl);text-decoration:none;}
+.footer-brand{font-family:'Playfair Display',serif;font-size:20px;margin-bottom:12px;color:#F5F1EA;}
+@media(max-width:640px){nav{padding:16px 20px;}.nav-links{display:none;}.hero{padding:70px 20px 90px;}.produtos,.missao,.numeros{padding:60px 20px;}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-brand">Artesão <span>Digital</span></div>
+  <div class="nav-links">
+    <a href="#produtos">Produtos</a>
+    <a href="mailto:contato@artesaodigital.com">Contato</a>
+    <a href="https://instagram.com/artesaodigital">Instagram</a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-eyebrow">ARTESÃO DIGITAL</div>
+  <h1>Tecnologia e conhecimento<br/>para artesãos que querem<br/><em>lucrar de verdade.</em></h1>
+  <p>Ferramentas práticas, guias completos e soluções digitais criadas especialmente para artesãos brasileiros que tratam o ateliê como um negócio sério.</p>
+  <svg class="hero-wave" viewBox="0 0 1440 70" preserveAspectRatio="none"><path d="M0,0 C480,70 960,70 1440,0 L1440,70 L0,70 Z" fill="#EDE6DA"/></svg>
+</section>
+<section class="produtos" id="produtos">
+  <p class="section-label">NOSSOS PRODUTOS</p>
+  <h2 class="section-title">Tudo que você precisa para profissionalizar seu ateliê</h2>
+  <p class="section-desc">Produtos digitais criados com uma missão: resolver as dores reais de quem vive do artesanato.</p>
+  <div class="produtos-grid">
+    <div class="produto-card">
+      <div class="card-top">
+        <div class="card-tag tag-ebook">EBOOK</div>
+        <div class="card-icone">📐</div>
+        <h3>Quanto Vale o Seu Artesanato?</h3>
+        <p>O guia completo para calcular o preço justo de qualquer peça. Fórmula completa, 4 exemplos reais e os 7 erros fatais na precificação.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="card-preco"><small>R$</small> 37</div>
+        <a href="/quanto-vale" class="card-btn">Ver página →</a>
+      </div>
+    </div>
+    <div class="produto-card">
+      <div class="card-top">
+        <div class="card-tag tag-pack">PACK DE PLANILHAS</div>
+        <div class="card-icone">📊</div>
+        <h3>Pack de Planilhas do Ateliê</h3>
+        <p>4 planilhas profissionais prontas para usar: Calculadora de Preço, Controle de Estoque, Gestão de Pedidos e Financeiro Mensal.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="card-preco"><small>R$</small> 47</div>
+        <a href="/planilhas" class="card-btn">Ver página →</a>
+      </div>
+    </div>
+    <div class="produto-card">
+      <div class="card-top">
+        <div class="card-tag tag-ebook">EBOOK</div>
+        <div class="card-icone">📸</div>
+        <h3>Fotos que Vendem</h3>
+        <p>Aprenda a fotografar seu artesanato com o celular e transforme suas fotos no maior vendedor do seu negócio. Sem câmera profissional.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="card-preco"><small>R$</small> 27</div>
+        <a href="/fotos" class="card-btn">Ver página →</a>
+      </div>
+    </div>
+    <div class="produto-card">
+      <div class="card-top">
+        <div class="card-tag tag-breve">EM BREVE</div>
+        <div class="card-icone">⚡</div>
+        <h3>Artesão Certo — App</h3>
+        <p>Calcule o preço de qualquer produto em segundos diretamente no celular. Motor de cálculo automático, banco de materiais e muito mais.</p>
+      </div>
+      <div class="card-bottom">
+        <div class="card-preco" style="font-size:16px;color:var(--texto-cl);">Em breve</div>
+        <a href="#" class="card-btn breve">Aguarde →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="missao">
+  <div class="missao-box">
+    <p class="section-label">NOSSA MISSÃO</p>
+    <blockquote>"Ninguém nos ensina a precificar. Ninguém nos ensina a fotografar para vender. Ninguém nos ensina a gerir o ateliê como um negócio."</blockquote>
+    <p>A Artesão Digital nasceu para mudar isso. Criamos produtos digitais práticos e acessíveis que colocam nas mãos de artesãos brasileiros as mesmas ferramentas que grandes negócios usam — adaptadas para a realidade do ateliê.</p>
+  </div>
+</section>
+<section class="numeros">
+  <div class="numeros-grid">
+    <div class="numero-item"><div class="num">+8M</div><div class="label">Artesãos ativos no Brasil</div></div>
+    <div class="numero-item"><div class="num">3</div><div class="label">Produtos disponíveis agora</div></div>
+    <div class="numero-item"><div class="num">7</div><div class="label">Dias de garantia em tudo</div></div>
+    <div class="numero-item"><div class="num">∞</div><div class="label">Acesso vitalício após compra</div></div>
+  </div>
+</section>
+<footer>
+  <div class="footer-brand">Artesão Digital</div>
+  <a href="mailto:contato@artesaodigital.com">contato@artesaodigital.com</a> &nbsp;•&nbsp;
+  <a href="https://instagram.com/artesaodigital">@artesaodigital</a><br/>
+  © 2025 Artesão Digital. Todos os direitos reservados.
+</footer>
+</body>
+</html>
