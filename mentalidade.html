@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)file:///C:/Users/Rodrigo/Downloads/mentalidade_1.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mentalidade de Negócio para Artesãs — Artesão Digital</title>
+<link href="./mentalidade_files/css2" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{--marrom:#8B5E3C;--marrom-esc:#6B4326;--verde:#6B8F71;--verde-esc:#4d6b52;--dourado:#B8860B;--dourado-cl:#F0C060;--bege:#F5F1EA;--bege-md:#EDE6DA;--bege-esc:#DDD3C2;--texto:#2C1F14;--texto-cl:#5A4030;}
+html{scroll-behavior:smooth;}
+body{font-family:'Lato',sans-serif;background:var(--bege);color:var(--texto);overflow-x:hidden;}
+.topbar{background:var(--marrom-esc);color:#F5F1EA;text-align:center;padding:10px 20px;font-size:13px;letter-spacing:1.5px;font-weight:700;}
+.topbar span{color:var(--dourado-cl);}
+nav{background:var(--bege);border-bottom:1px solid var(--bege-esc);padding:16px 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100;}
+.nav-brand{font-family:'Playfair Display',serif;font-size:18px;color:var(--marrom);letter-spacing:1px;}
+.nav-brand span{color:var(--verde);font-style:italic;}
+.nav-cta{background:var(--verde);color:#fff;padding:10px 24px;border-radius:4px;text-decoration:none;font-size:13px;font-weight:700;letter-spacing:1px;transition:background .2s;}
+.nav-cta:hover{background:var(--verde-esc);}
+.hero{background:var(--marrom-esc);color:#F5F1EA;padding:80px 40px 90px;text-align:center;position:relative;overflow:hidden;}
+.hero::before{content:'';position:absolute;top:-120px;left:50%;transform:translateX(-50%);width:700px;height:700px;border-radius:50%;background:rgba(0,0,0,.2);pointer-events:none;}
+.hero-eyebrow{display:inline-block;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:var(--dourado-cl);font-size:11px;letter-spacing:3px;font-weight:700;padding:6px 18px;border-radius:2px;margin-bottom:28px;position:relative;}
+.hero h1{font-family:'Playfair Display',serif;font-size:clamp(36px,6vw,66px);font-weight:700;line-height:1.1;margin-bottom:16px;position:relative;}
+.hero h1 em{color:var(--dourado-cl);font-style:italic;}
+.hero-sub{font-size:18px;font-weight:300;opacity:.85;max-width:600px;margin:0 auto 36px;line-height:1.65;position:relative;}
+.hero-pills{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:44px;position:relative;}
+.hero-pills span{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);padding:6px 16px;border-radius:20px;font-size:12px;letter-spacing:.5px;}
+.btn-hero{display:inline-block;background:var(--verde);color:#fff;padding:18px 52px;border-radius:4px;font-size:16px;font-weight:700;text-decoration:none;letter-spacing:1px;position:relative;transition:all .2s;box-shadow:0 4px 24px rgba(0,0,0,.3);}
+.btn-hero:hover{background:var(--verde-esc);transform:translateY(-2px);}
+.btn-hero-sub{display:block;margin-top:12px;font-size:12px;opacity:.65;letter-spacing:.5px;position:relative;}
+.hero-wave{position:absolute;bottom:-1px;left:0;right:0;height:60px;}
+.espelho{background:var(--bege-md);padding:80px 40px;text-align:center;}
+.espelho-intro{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,38px);color:var(--marrom);max-width:700px;margin:0 auto 20px;line-height:1.35;}
+.espelho-intro em{color:var(--dourado);font-style:italic;}
+.espelho-desc{color:var(--texto-cl);font-size:16px;max-width:580px;margin:0 auto 52px;line-height:1.7;}
+.crenças-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:960px;margin:0 auto;}
+.crenca{background:#fff;border:1px solid var(--bege-esc);border-left:4px solid var(--marrom);border-radius:4px;padding:24px 22px;text-align:left;}
+.crenca-icone{font-size:24px;margin-bottom:10px;}
+.crenca p{font-size:14px;color:var(--texto-cl);line-height:1.6;font-style:italic;}
+.crenca-verdade{font-size:13px;font-weight:700;color:var(--verde-esc);margin-top:10px;}
+.jornada{background:var(--bege);padding:90px 40px;text-align:center;}
+.section-label{font-size:11px;letter-spacing:3px;font-weight:700;color:var(--verde);text-transform:uppercase;margin-bottom:16px;}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,44px);color:var(--marrom);max-width:680px;margin:0 auto 16px;line-height:1.25;}
+.section-desc{font-size:16px;color:var(--texto-cl);max-width:560px;margin:0 auto 56px;line-height:1.7;}
+.caps{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:980px;margin:0 auto;}
+.cap{background:#fff;border:1px solid var(--bege-esc);border-radius:6px;padding:28px 24px;text-align:left;transition:box-shadow .2s;}
+.cap:hover{box-shadow:0 4px 20px rgba(139,94,60,.1);}
+.cap-num{font-family:'Playfair Display',serif;font-size:36px;color:var(--bege-esc);font-weight:700;line-height:1;margin-bottom:12px;}
+.cap h3{font-family:'Playfair Display',serif;font-size:17px;color:var(--marrom);margin-bottom:8px;line-height:1.3;}
+.cap p{font-size:14px;color:var(--texto-cl);line-height:1.65;}
+.cap-tag{display:inline-block;font-size:10px;letter-spacing:1.5px;font-weight:700;padding:3px 10px;border-radius:2px;background:rgba(107,143,113,.12);color:var(--verde-esc);margin-bottom:10px;}
+.frase-section{background:var(--marrom);color:#F5F1EA;padding:80px 40px;text-align:center;}
+.frase-section blockquote{font-family:'Playfair Display',serif;font-size:clamp(22px,4vw,36px);font-style:italic;max-width:720px;margin:0 auto 20px;line-height:1.4;color:#F5F1EA;}
+.frase-section cite{font-size:13px;opacity:.55;letter-spacing:2px;}
+.vendas-section{background:var(--bege-md);padding:80px 40px;text-align:center;}
+.vendas-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:900px;margin:0 auto;}
+.venda-item{background:#fff;border-radius:6px;padding:28px 22px;text-align:left;border-top:3px solid var(--verde);}
+.venda-icone{font-size:28px;margin-bottom:12px;}
+.venda-item h4{font-family:'Playfair Display',serif;font-size:16px;color:var(--marrom);margin-bottom:8px;}
+.venda-item p{font-size:13px;color:var(--texto-cl);line-height:1.6;}
+.plano{background:var(--verde);color:#fff;padding:80px 40px;text-align:center;}
+.plano h2{font-family:'Playfair Display',serif;font-size:clamp(24px,4vw,40px);margin-bottom:16px;line-height:1.25;}
+.plano p{font-size:16px;opacity:.9;max-width:600px;margin:0 auto 48px;line-height:1.65;}
+.plano-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;max-width:860px;margin:0 auto;}
+.plano-item{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:6px;padding:28px 22px;text-align:left;}
+.plano-item h4{font-size:15px;font-weight:700;color:var(--dourado-cl);margin-bottom:10px;letter-spacing:.5px;}
+.plano-item ul{list-style:none;padding:0;}
+.plano-item ul li{font-size:13px;padding:4px 0;opacity:.85;display:flex;gap:8px;}
+.plano-item ul li::before{content:"→";flex-shrink:0;}
+.para-quem{background:var(--bege);padding:80px 40px;text-align:center;}
+.para-quem-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;max-width:860px;margin:0 auto;}
+.para-quem-item{background:var(--bege-md);border-radius:6px;padding:22px 20px;text-align:left;display:flex;gap:14px;align-items:flex-start;}
+.check{width:22px;height:22px;background:var(--verde);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700;flex-shrink:0;margin-top:2px;}
+.para-quem-item p{font-size:14px;color:var(--texto-cl);line-height:1.55;}
+.garantia{background:var(--bege-md);padding:70px 40px;text-align:center;}
+.garantia-box{background:#fff;border:2px solid var(--verde);border-radius:8px;padding:40px 48px;max-width:580px;margin:0 auto;}
+.garantia-box .g-icon{font-size:44px;margin-bottom:16px;}
+.garantia-box h3{font-family:'Playfair Display',serif;font-size:24px;color:var(--marrom);margin-bottom:14px;}
+.garantia-box p{font-size:15px;color:var(--texto-cl);line-height:1.7;}
+.cta-final{background:var(--marrom-esc);color:#F5F1EA;padding:90px 40px;text-align:center;}
+.cta-final h2{font-family:'Playfair Display',serif;font-size:clamp(28px,5vw,52px);margin-bottom:12px;line-height:1.15;}
+.cta-final h2 em{color:var(--dourado-cl);font-style:italic;}
+.cta-final p{font-size:17px;opacity:.8;max-width:520px;margin:0 auto 36px;line-height:1.65;}
+.preco-box{margin-bottom:32px;}
+.preco-de{font-size:14px;opacity:.55;letter-spacing:.5px;margin-bottom:4px;}
+.preco-de s{opacity:.8;}
+.preco-por{font-family:'Playfair Display',serif;font-size:clamp(44px,7vw,72px);color:var(--dourado-cl);font-weight:700;line-height:1;}
+.preco-por small{font-size:28px;vertical-align:super;}
+.preco-pix{font-size:13px;opacity:.6;margin-top:6px;letter-spacing:.5px;}
+.btn-cta{display:inline-block;background:var(--verde);color:#fff;padding:20px 60px;border-radius:4px;font-size:17px;font-weight:700;text-decoration:none;letter-spacing:1px;transition:all .2s;box-shadow:0 6px 28px rgba(0,0,0,.3);}
+.btn-cta:hover{background:var(--verde-esc);transform:translateY(-2px);}
+.cta-seguro{margin-top:16px;font-size:12px;opacity:.5;letter-spacing:.5px;}
+footer{background:var(--marrom-esc);color:#F5F1EA;text-align:center;padding:32px 40px;font-size:13px;opacity:.9;line-height:1.8;border-top:1px solid rgba(255,255,255,.1);}
+footer a{color:var(--dourado-cl);text-decoration:none;}
+@keyframes fadeUp{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:translateY(0);}}
+.hero>*{animation:fadeUp .7s ease both;}
+.hero .hero-eyebrow{animation-delay:.1s;}.hero h1{animation-delay:.2s;}.hero .hero-sub{animation-delay:.3s;}.hero .hero-pills{animation-delay:.4s;}.hero .btn-hero{animation-delay:.5s;}
+@media(max-width:640px){nav{padding:14px 20px;}.hero,.espelho,.jornada,.frase-section,.vendas-section,.plano,.para-quem,.garantia,.cta-final{padding:60px 20px;}.garantia-box{padding:32px 24px;}}
+</style>
+</head>
+<body>
+
+<div class="topbar">💡 50 páginas de transformação real &nbsp;•&nbsp; <span>Garantia de 7 dias</span> &nbsp;•&nbsp; PDF com acesso imediato</div>
+
+<nav>
+  <div class="nav-brand">Artesão <span>Digital</span></div>
+  <a href="https://pay.kiwify.com.br/OcMUlB9" class="nav-cta">Quero o Ebook →</a>
+</nav>
+
+<section class="hero">
+  <div class="hero-eyebrow">EBOOK COMPLETO — 7 CAPÍTULOS</div>
+  <h1>Mentalidade de<br><em>Negócio</em> para Artesãs</h1>
+  <p class="hero-sub">Você tem um produto incrível. O que falta não é talento — é a mentalidade certa para transformar seu ateliê num negócio que cresce de verdade.</p>
+  <div class="hero-pills">
+    <span>🧠 Reprogramação mental</span>
+    <span>💬 Scripts de vendas prontos</span>
+    <span>📅 Plano de 7 e 30 dias</span>
+    <span>✅ Checklist de ação</span>
+  </div>
+  <a href="https://pay.kiwify.com.br/OcMUlB9" class="btn-hero">QUERO MUDAR MINHA MENTALIDADE</a>
+  <span class="btn-hero-sub">Download imediato em PDF • 50 páginas • R$ 67,00</span>
+  <svg class="hero-wave" viewBox="0 0 1440 60" preserveAspectRatio="none"><path d="M0,0 C480,60 960,60 1440,0 L1440,60 L0,60 Z" fill="#EDE6DA"></path></svg>
+</section>
+
+<section class="espelho">
+  <p class="espelho-intro">Você já se reconheceu em alguma dessas <em>frases?</em></p>
+  <p class="espelho-desc">Essas crenças aparecem na cabeça de quase toda artesã — e são exatamente elas que impedem o crescimento. Não é falta de talento. É falta de mentalidade.</p>
+  <div class="crenças-grid">
+    <div class="crenca">
+      <div class="crenca-icone">😔</div>
+      <p>"Artesanato não dá dinheiro de verdade. É só hobbie."</p>
+      <div class="crenca-verdade">✓ A verdade: é um mercado de R$ 50 bilhões no Brasil</div>
+    </div>
+    <div class="crenca">
+      <div class="crenca-icone">😰</div>
+      <p>"Tenho vergonha de vender. Parece que estou pedindo favor."</p>
+      <div class="crenca-verdade">✓ A verdade: vender é oferecer solução para quem precisa</div>
+    </div>
+    <div class="crenca">
+      <div class="crenca-icone">😟</div>
+      <p>"Meu produto não é tão bom quanto o da fulana."</p>
+      <div class="crenca-verdade">✓ A verdade: comparação bloqueia quem poderia estar crescendo</div>
+    </div>
+    <div class="crenca">
+      <div class="crenca-icone">😣</div>
+      <p>"Se eu cobrar mais caro, ninguém vai comprar."</p>
+      <div class="crenca-verdade">✓ A verdade: preço baixo afasta o cliente certo e atrai barganha</div>
+    </div>
+    <div class="crenca">
+      <div class="crenca-icone">😞</div>
+      <p>"Já tentei vender antes e não funcionou. Não é pra mim."</p>
+      <div class="crenca-verdade">✓ A verdade: tentou sem estratégia — não sem capacidade</div>
+    </div>
+    <div class="crenca">
+      <div class="crenca-icone">🤯</div>
+      <p>"Não tenho tempo para me dedicar ao negócio do jeito certo."</p>
+      <div class="crenca-verdade">✓ A verdade: não é falta de tempo — é falta de rotina mínima</div>
+    </div>
+  </div>
+</section>
+
+<section class="jornada">
+  <p class="section-label">A JORNADA DO EBOOK</p>
+  <h2 class="section-title">7 capítulos que levam você da estagnação à ação</h2>
+  <p class="section-desc">Uma jornada de transformação progressiva — do diagnóstico até o plano de ação executável em 30 minutos.</p>
+  <div class="caps">
+    <div class="cap">
+      <div class="cap-tag">DESPERTAR</div>
+      <div class="cap-num">01</div>
+      <h3>Hobby vs Negócio — Qual a Diferença Real</h3>
+      <p>Por que artesãs incríveis ganham tão pouco? As 5 crenças que travam o crescimento — e o exercício do "porquê" que muda a perspectiva.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-tag">MENTALIDADE</div>
+      <div class="cap-num">02</div>
+      <h3>Reprogramação Mental</h3>
+      <p>Síndrome da impostora, medo de se expor, armadilha da comparação. 3 cenários reais de autossabotagem e como sair deles.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-tag">POSICIONAMENTO</div>
+      <div class="cap-num">03</div>
+      <h3>Valor e Posicionamento</h3>
+      <p>O que o cliente realmente compra. Como criar valor percebido e parar de competir por preço — com exemplos reais de quem virou o jogo.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-tag">GESTÃO</div>
+      <div class="cap-num">04</div>
+      <h3>Pensamento de Negócio</h3>
+      <p>Como agir como marca, organizar minimamente a produção e evitar os erros mais comuns de quem produz sem estratégia.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-tag">VENDAS</div>
+      <div class="cap-num">05</div>
+      <h3>Vendas Sem Medo</h3>
+      <p>O que postar no Instagram, como conduzir conversas no WhatsApp, scripts prontos para fechar vendas e lidar com "tá caro" sem descontar.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-tag">CONSISTÊNCIA</div>
+      <div class="cap-num">06</div>
+      <h3>Consistência e Crescimento</h3>
+      <p>Por que você começa e para — e como criar disciplina mesmo sem motivação. A rotina mínima semanal que sustenta resultados reais.</p>
+    </div>
+    <div class="cap">
+      <div class="cap-tag">AÇÃO</div>
+      <div class="cap-num">07</div>
+      <h3>Plano de Ação</h3>
+      <p>Passos objetivos para os próximos 7 e 30 dias, metas simples e checklist final de comprometimento. Conteúdo que sai da teoria e vira resultado.</p>
+    </div>
+  </div>
+</section>
+
+<section class="frase-section">
+  <blockquote>"Você não está travada por falta de talento. Está travada por crenças que nunca questionou."</blockquote>
+  <cite>— ARTESÃO DIGITAL</cite>
+</section>
+
+<section class="vendas-section">
+  <p class="section-label">O CAPÍTULO DE VENDAS</p>
+  <h2 class="section-title">Scripts prontos para usar ainda hoje</h2>
+  <p class="section-desc">O capítulo 5 é o mais completo do ebook — e vai mudar como você se comunica com seus clientes para sempre.</p>
+  <div class="vendas-grid">
+    <div class="venda-item">
+      <div class="venda-icone">📱</div>
+      <h4>5 Erros Fatais no Instagram</h4>
+      <p>Os erros que fazem artesãs terem seguidores mas não vendas — e como corrigir cada um deles.</p>
+    </div>
+    <div class="venda-item">
+      <div class="venda-icone">📅</div>
+      <h4>Roteiro de 7 Dias de Conteúdo</h4>
+      <p>O que postar cada dia da semana para gerar engajamento, construir autoridade e converter em venda.</p>
+    </div>
+    <div class="venda-item">
+      <div class="venda-icone">✍️</div>
+      <h4>3 Posts Prontos Completos</h4>
+      <p>Gancho + corpo + CTA escritos — é só adaptar para o seu produto e publicar.</p>
+    </div>
+    <div class="venda-item">
+      <div class="venda-icone">💬</div>
+      <h4>5 Scripts de WhatsApp</h4>
+      <p>Como responder ao "tá caro", fazer follow-up, fechar encomenda e reativar cliente antigo.</p>
+    </div>
+    <div class="venda-item">
+      <div class="venda-icone">🛒</div>
+      <h4>Catálogo do WhatsApp Business</h4>
+      <p>Como configurar e usar o catálogo para facilitar a compra e parecer mais profissional.</p>
+    </div>
+    <div class="venda-item">
+      <div class="venda-icone">🤝</div>
+      <h4>Como Lidar com Clientes Difíceis</h4>
+      <p>Os tipos de cliente que drenam energia — e como conduzir cada situação sem perder a venda nem o respeito.</p>
+    </div>
+  </div>
+</section>
+
+<section class="plano">
+  <h2>Conteúdo que vira ação.<br>Na mesma tarde que você lê.</h2>
+  <p>O ebook não termina com teoria. Termina com um plano concreto que você consegue começar a executar em 30 minutos.</p>
+  <div class="plano-grid">
+    <div class="plano-item">
+      <h4>📅 PLANO DE 7 DIAS</h4>
+      <ul>
+        <li>Dia 1: Identificar e quebrar a crença número 1</li>
+        <li>Dia 2: Definir seu cliente ideal</li>
+        <li>Dia 3: Calcular o valor do seu trabalho</li>
+        <li>Dia 4: Criar ou otimizar o perfil profissional</li>
+        <li>Dia 5: Publicar o primeiro post com o roteiro</li>
+        <li>Dia 6: Treinar o script de vendas no WhatsApp</li>
+        <li>Dia 7: Montar sua rotina mínima semanal</li>
+      </ul>
+    </div>
+    <div class="plano-item">
+      <h4>🎯 METAS DE 30 DIAS</h4>
+      <ul>
+        <li>Consistência: publicar pelo menos 3x por semana</li>
+        <li>Vendas: abordar ativamente 10 potenciais clientes</li>
+        <li>Posicionamento: reajustar preço de pelo menos 1 produto</li>
+        <li>Gestão: organizar os pedidos do mês</li>
+        <li>Mentalidade: reler 1 capítulo por semana</li>
+      </ul>
+    </div>
+    <div class="plano-item">
+      <h4>✅ CHECKLIST FINAL</h4>
+      <ul>
+        <li>Li e apliquei pelo menos 1 exercício por capítulo</li>
+        <li>Identifiquei minhas 3 maiores crenças limitantes</li>
+        <li>Defini meu cliente ideal com clareza</li>
+        <li>Tenho uma rotina mínima de conteúdo</li>
+        <li>Tenho scripts de WhatsApp adaptados</li>
+        <li>Sei o próximo passo — e vou dar hoje</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="para-quem">
+  <p class="section-label">PARA QUEM É ESSE EBOOK</p>
+  <h2 class="section-title">Este ebook foi feito para você se...</h2>
+  <div class="para-quem-grid">
+    <div class="para-quem-item"><div class="check">✓</div><p>Você tem um produto bom mas sente que não consegue vender — e não entende por quê</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você tem vergonha ou medo de cobrar o preço justo e acaba cedendo ao primeiro "tá caro"</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você se compara com outras artesãs e sente que nunca está no nível certo</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você começa, cria energia, some por semanas — e se culpa por isso</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você quer começar a usar Instagram e WhatsApp para vender mas não sabe o que fazer</p></div>
+    <div class="para-quem-item"><div class="check">✓</div><p>Você quer tratar seu artesanato como um negócio de verdade — mas não sabe por onde começar</p></div>
+  </div>
+</section>
+
+<section class="garantia">
+  <p class="section-label">RISCO ZERO</p>
+  <div class="garantia-box">
+    <div class="g-icon">🔒</div>
+    <h3>Garantia incondicional de 7 dias</h3>
+    <p>Se você não ficar 100% satisfeita com o conteúdo, basta entrar em contato dentro de 7 dias após a compra e devolvemos todo o seu dinheiro. Sem perguntas. Sem burocracia.</p>
+  </div>
+</section>
+
+<section class="cta-final" id="comprar">
+  <h2>Sua mentalidade é o único negócio<br>que você precisa <em>construir primeiro.</em></h2>
+  <p>Tudo o mais — preço, foto, Instagram — vem depois. Comece pelo que realmente trava.</p>
+  <div class="preco-box">
+    <div class="preco-de">De <s>R$ 97,00</s></div>
+    <div class="preco-por"><small>R$</small> 67<small>,00</small></div>
+    <div class="preco-pix">ou R$ 63,65 no Pix</div>
+  </div>
+  <a href="https://pay.kiwify.com.br/OcMUlB9" class="btn-cta">QUERO MUDAR MINHA MENTALIDADE →</a>
+  <div class="cta-seguro">🔒 Compra segura • Download imediato • Garantia de 7 dias</div>
+</section>
+
+<footer>
+  <strong>Artesão Digital</strong><br>
+  <a href="mailto:contato@artesaodigital.com">contato@artesaodigital.com</a> &nbsp;•&nbsp; <a href="https://artesaodigital.com/">artesaodigital.com</a><br>
+  © 2025 Artesão Digital. Todos os direitos reservados.
+</footer>
+
+
+
+</body></html>
